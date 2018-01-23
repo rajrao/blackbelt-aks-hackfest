@@ -14,13 +14,13 @@ kubectl get pods | grep heroes
 # You should see something like the following as output (one replica of each pod):
 heroes-api-deploy-1165643395-fwjtm             1/1       Running   0          2d
 heroes-db-deploy-839157328-4656j               1/1       Running   0          2d
-heroes-web-1677855039-8t57k                    1/1       Running   0          2d
+heroes-web-deploy-1677855039-8t57k                    1/1       Running   0          2d
 ```
 3. Scale out the Web application
 * To simulate a real-world scenario we are going to scale the web app to handle increased load.
 ```bash
 # This command will create multiple replicas of the heroes-web pod to simulate additional load on the cluster.
-kubectl scale deploy/heroes-web --replicas=4
+kubectl scale deploy/heroes-web-deploy --replicas=4
 ```
 4. Check to see number of pods now running via Grafana Dashboard
 
